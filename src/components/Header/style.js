@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import profile from "../../assets/icon-profile.png";
 
 export const HeaderContainer = styled.header`
   position: sticky;
@@ -23,4 +24,15 @@ export const HeaderTextBox = styled.div`
   span {
     cursor: pointer;
   }
+`;
+
+export const Profile = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(${profile});
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  background-repeat: no-repeat;
 `;

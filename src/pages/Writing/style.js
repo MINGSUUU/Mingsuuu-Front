@@ -28,9 +28,22 @@ export const CommentInputWrapper = styled.div`
   }
 `;
 
+export const SelectedBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+`;
+
+export const SelectedListBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
 export const styledSelect = styled(Select)`
   width: 45%;
-  height: 83px;
+  height: 60px;
 `;
 
 export const SelectInputBox = styled.div`

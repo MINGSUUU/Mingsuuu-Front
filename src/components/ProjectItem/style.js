@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import profile from "../../assets/icon-profile.png";
 
 export const ProjectItemContainer = styled.div`
   border: 4px solid #b5b4b4;
@@ -28,6 +29,16 @@ export const TitleUserBox = styled.div`
   font-weight: 500;
 `;
 
+export const Profile = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(${profile});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
 export const DateBox = styled.div`
   width: 90px;
   height: 35px;
@@ -55,11 +66,23 @@ export const ProjectInfoBox = styled.div`
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -2px;
+  h2 {
+    a {
+      color: #000;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 `;
 
 export const ProjectInfoListBox = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 export const ProjectInfoItem = styled.div`

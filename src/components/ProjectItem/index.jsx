@@ -1,26 +1,34 @@
+import { Link } from 'react-router-dom';
 import * as S from './style'
 
-function ProjectItem(props) {
+function ProjectItem({item}) {
+  const nowDate = new Date().getDate()
     return (
         <S.ProjectItemContainer>
             <S.ProjectItemTitleBox>
                 <S.TitleUserBox>
-                  <div style={{width: '30px', height: '30px', borderRadius: '50%', background: 'red'}} />
-                  <span>나연균</span>
+                  <S.Profile />
+                  <span>{item.author}</span>
                 </S.TitleUserBox>
                 <S.DateBox>
-                  마감 6일 전!
+                  마감 {+item.endDate.slice(8) - nowDate}일 전!
                 </S.DateBox>
             </S.ProjectItemTitleBox>
                 <S.DeadLineBox>
-                  마감일 | 2023.12.21
+                  마감일 | {item.endDate}
                 </S.DeadLineBox>
                 <S.ProjectInfoBox>
-                  <h2>프로젝트 같이 할 사람 찾아요</h2>
+                  <h2>
+                    <Link to={`/details/${item.boardId}`}>
+                      {item.title}
+                    </Link>
+                  </h2>
                   <S.ProjectInfoListBox>
-                    <S.ProjectInfoItem>
-                        <span>프론트엔드</span>
-                    </S.ProjectInfoItem>
+                    {item.fieldList.map((field, idx) => (
+                      <S.ProjectInfoItem key={idx}>
+                        <span>{field}</span>
+                        </S.ProjectInfoItem>
+                    ))}
                   </S.ProjectInfoListBox>
                 </S.ProjectInfoBox>
         </S.ProjectItemContainer>

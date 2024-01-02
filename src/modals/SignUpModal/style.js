@@ -106,6 +106,10 @@ export const SignUpFooter = styled.div`
     font-weight: 800;
     line-height: normal;
   }
+
+  button {
+    cursor: pointer;
+  }
 `;
 
 export const SignUpFooterText = styled.div`
@@ -120,6 +124,11 @@ export const SignUpFooterText = styled.div`
     }
     &:nth-child(2) {
       color: red;
+    }
+
+    b {
+      color: blue;
+      font-weight: 500;
     }
   }
 

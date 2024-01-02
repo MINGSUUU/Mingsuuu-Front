@@ -121,6 +121,10 @@ export const LoginFooterText = styled.div`
     &:nth-child(2) {
       color: red;
     }
+    b {
+      color: blue;
+      font-weight: 500;
+    }
   }
 
   a {

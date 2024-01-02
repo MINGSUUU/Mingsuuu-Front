@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Main from "./pages/Main";
+import Main from "./pages/Board";
 import Header from "./components/Header";
 import Details from "./pages/Details";
 import Writing from "./pages/Writing";
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
         <Route path="/writing" element={<Writing />} />
       </Routes>
     </>
